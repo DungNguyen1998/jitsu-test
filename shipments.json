@@ -1,0 +1,1015 @@
+{
+  "statuses": [
+    {
+      "id": "OPEN"
+    },
+    {
+      "id": "IN_TRANSIT"
+    },
+    {
+      "id": "DELIVERED"
+    }
+  ],
+  "shipments": [
+    {
+      "id": "shp_001",
+      "client_name": "Samsung",
+      "container_label": "LAX-581-250521-1",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-09T05:08:49.102Z",
+      "delivery_by_date": "2025-06-11T05:08:49.102Z",
+      "eta": "2025-06-09T06:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_002",
+      "client_name": "DHL",
+      "container_label": "JFK-581-250522-2",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-04T05:08:49.102Z",
+      "delivery_by_date": "2025-06-06T05:08:49.102Z",
+      "eta": "2025-06-05T06:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_003",
+      "client_name": "CargoTrans",
+      "container_label": "SFO-581-250523-3",
+      "status": "OPEN",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-04T23:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_004",
+      "client_name": "ShipCo",
+      "container_label": "SEA-581-250524-4",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-04T05:08:49.102Z",
+      "delivery_by_date": "2025-06-06T05:08:49.102Z",
+      "eta": "2025-06-05T22:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_005",
+      "client_name": "Logix",
+      "container_label": "EWR-581-250525-5",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-07T09:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_006",
+      "client_name": "Oceanic",
+      "container_label": "LAX-581-250526-6",
+      "status": "OPEN",
+      "arrival_date": "2025-05-31T05:08:49.102Z",
+      "delivery_by_date": "2025-06-02T05:08:49.102Z",
+      "eta": "2025-06-01T23:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_007",
+      "client_name": "Sony",
+      "container_label": "JFK-581-250527-7",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-02T05:08:49.102Z",
+      "delivery_by_date": "2025-06-04T05:08:49.102Z",
+      "eta": "2025-06-02T19:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_008",
+      "client_name": "Samsung",
+      "container_label": "SFO-581-250528-8",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-09T19:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_009",
+      "client_name": "DHL",
+      "container_label": "SEA-581-250529-9",
+      "status": "OPEN",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-09T13:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_010",
+      "client_name": "CargoTrans",
+      "container_label": "EWR-581-250520-10",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-04T05:08:49.102Z",
+      "delivery_by_date": "2025-06-06T05:08:49.102Z",
+      "eta": "2025-06-05T18:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_011",
+      "client_name": "ShipCo",
+      "container_label": "LAX-581-250521-11",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-01T05:08:49.102Z",
+      "delivery_by_date": "2025-06-03T05:08:49.102Z",
+      "eta": "2025-06-01T11:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_012",
+      "client_name": "Logix",
+      "container_label": "JFK-581-250522-12",
+      "status": "OPEN",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-03T22:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_013",
+      "client_name": "Oceanic",
+      "container_label": "SFO-581-250523-13",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-05-31T05:08:49.102Z",
+      "delivery_by_date": "2025-06-02T05:08:49.102Z",
+      "eta": "2025-06-01T19:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_014",
+      "client_name": "Sony",
+      "container_label": "SEA-581-250524-14",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-02T05:08:49.102Z",
+      "delivery_by_date": "2025-06-04T05:08:49.102Z",
+      "eta": "2025-06-03T17:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_015",
+      "client_name": "Samsung",
+      "container_label": "EWR-581-250525-15",
+      "status": "OPEN",
+      "arrival_date": "2025-06-05T05:08:49.102Z",
+      "delivery_by_date": "2025-06-07T05:08:49.102Z",
+      "eta": "2025-06-06T15:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_016",
+      "client_name": "DHL",
+      "container_label": "LAX-581-250526-16",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-04T05:08:49.102Z",
+      "delivery_by_date": "2025-06-06T05:08:49.102Z",
+      "eta": "2025-06-05T10:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_017",
+      "client_name": "CargoTrans",
+      "container_label": "JFK-581-250527-17",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-07T19:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_018",
+      "client_name": "ShipCo",
+      "container_label": "SFO-581-250528-18",
+      "status": "OPEN",
+      "arrival_date": "2025-06-02T05:08:49.102Z",
+      "delivery_by_date": "2025-06-04T05:08:49.102Z",
+      "eta": "2025-06-02T16:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_019",
+      "client_name": "Logix",
+      "container_label": "SEA-581-250529-19",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-03T11:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_020",
+      "client_name": "Oceanic",
+      "container_label": "EWR-581-250520-20",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-05T02:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_021",
+      "client_name": "Sony",
+      "container_label": "LAX-581-250521-21",
+      "status": "OPEN",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-08T23:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_022",
+      "client_name": "Samsung",
+      "container_label": "JFK-581-250522-22",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-02T05:08:49.102Z",
+      "delivery_by_date": "2025-06-04T05:08:49.102Z",
+      "eta": "2025-06-02T17:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_023",
+      "client_name": "DHL",
+      "container_label": "SFO-581-250523-23",
+      "status": "DELIVERED",
+      "arrival_date": "2025-05-31T05:08:49.102Z",
+      "delivery_by_date": "2025-06-02T05:08:49.102Z",
+      "eta": "2025-06-01T16:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_024",
+      "client_name": "CargoTrans",
+      "container_label": "SEA-581-250524-24",
+      "status": "OPEN",
+      "arrival_date": "2025-06-01T05:08:49.102Z",
+      "delivery_by_date": "2025-06-03T05:08:49.102Z",
+      "eta": "2025-06-02T03:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_025",
+      "client_name": "ShipCo",
+      "container_label": "EWR-581-250525-25",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-04T05:08:49.102Z",
+      "delivery_by_date": "2025-06-06T05:08:49.102Z",
+      "eta": "2025-06-04T22:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_026",
+      "client_name": "Logix",
+      "container_label": "LAX-581-250526-26",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-02T05:08:49.102Z",
+      "delivery_by_date": "2025-06-04T05:08:49.102Z",
+      "eta": "2025-06-02T14:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_027",
+      "client_name": "Oceanic",
+      "container_label": "JFK-581-250527-27",
+      "status": "OPEN",
+      "arrival_date": "2025-06-01T05:08:49.102Z",
+      "delivery_by_date": "2025-06-03T05:08:49.102Z",
+      "eta": "2025-06-02T03:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_028",
+      "client_name": "Sony",
+      "container_label": "SFO-581-250528-28",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-08T20:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_029",
+      "client_name": "Samsung",
+      "container_label": "SEA-581-250529-29",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-01T05:08:49.102Z",
+      "delivery_by_date": "2025-06-03T05:08:49.102Z",
+      "eta": "2025-06-03T00:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_030",
+      "client_name": "DHL",
+      "container_label": "EWR-581-250520-30",
+      "status": "OPEN",
+      "arrival_date": "2025-06-09T05:08:49.102Z",
+      "delivery_by_date": "2025-06-11T05:08:49.102Z",
+      "eta": "2025-06-10T22:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_031",
+      "client_name": "CargoTrans",
+      "container_label": "LAX-581-250521-31",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-08T20:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_032",
+      "client_name": "ShipCo",
+      "container_label": "JFK-581-250522-32",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-08T08:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_033",
+      "client_name": "Logix",
+      "container_label": "SFO-581-250523-33",
+      "status": "OPEN",
+      "arrival_date": "2025-06-01T05:08:49.102Z",
+      "delivery_by_date": "2025-06-03T05:08:49.102Z",
+      "eta": "2025-06-03T03:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_034",
+      "client_name": "Oceanic",
+      "container_label": "SEA-581-250524-34",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-06T05:08:49.102Z",
+      "delivery_by_date": "2025-06-08T05:08:49.102Z",
+      "eta": "2025-06-06T15:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_035",
+      "client_name": "Sony",
+      "container_label": "EWR-581-250525-35",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-02T05:08:49.102Z",
+      "delivery_by_date": "2025-06-04T05:08:49.102Z",
+      "eta": "2025-06-02T12:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_036",
+      "client_name": "Samsung",
+      "container_label": "LAX-581-250526-36",
+      "status": "OPEN",
+      "arrival_date": "2025-05-31T05:08:49.102Z",
+      "delivery_by_date": "2025-06-02T05:08:49.102Z",
+      "eta": "2025-05-31T05:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_037",
+      "client_name": "DHL",
+      "container_label": "JFK-581-250527-37",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-09T05:08:49.102Z",
+      "delivery_by_date": "2025-06-11T05:08:49.102Z",
+      "eta": "2025-06-10T02:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_038",
+      "client_name": "CargoTrans",
+      "container_label": "SFO-581-250528-38",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-09T07:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_039",
+      "client_name": "ShipCo",
+      "container_label": "SEA-581-250529-39",
+      "status": "OPEN",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-08T17:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_040",
+      "client_name": "Logix",
+      "container_label": "EWR-581-250520-40",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-08T22:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_041",
+      "client_name": "Oceanic",
+      "container_label": "LAX-581-250521-41",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-01T05:08:49.102Z",
+      "delivery_by_date": "2025-06-03T05:08:49.102Z",
+      "eta": "2025-06-01T13:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_042",
+      "client_name": "Sony",
+      "container_label": "JFK-581-250522-42",
+      "status": "OPEN",
+      "arrival_date": "2025-06-09T05:08:49.102Z",
+      "delivery_by_date": "2025-06-11T05:08:49.102Z",
+      "eta": "2025-06-10T06:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_043",
+      "client_name": "Samsung",
+      "container_label": "SFO-581-250523-43",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-02T05:08:49.102Z",
+      "delivery_by_date": "2025-06-04T05:08:49.102Z",
+      "eta": "2025-06-02T17:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_044",
+      "client_name": "DHL",
+      "container_label": "SEA-581-250524-44",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-06T05:08:49.102Z",
+      "delivery_by_date": "2025-06-08T05:08:49.102Z",
+      "eta": "2025-06-07T06:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_045",
+      "client_name": "CargoTrans",
+      "container_label": "EWR-581-250525-45",
+      "status": "OPEN",
+      "arrival_date": "2025-06-04T05:08:49.102Z",
+      "delivery_by_date": "2025-06-06T05:08:49.102Z",
+      "eta": "2025-06-05T04:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_046",
+      "client_name": "ShipCo",
+      "container_label": "LAX-581-250526-46",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-02T05:08:49.102Z",
+      "delivery_by_date": "2025-06-04T05:08:49.102Z",
+      "eta": "2025-06-03T20:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_047",
+      "client_name": "Logix",
+      "container_label": "JFK-581-250527-47",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-03T09:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_048",
+      "client_name": "Oceanic",
+      "container_label": "SFO-581-250528-48",
+      "status": "OPEN",
+      "arrival_date": "2025-06-01T05:08:49.102Z",
+      "delivery_by_date": "2025-06-03T05:08:49.102Z",
+      "eta": "2025-06-02T11:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_049",
+      "client_name": "Sony",
+      "container_label": "SEA-581-250529-49",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-09T05:08:49.102Z",
+      "delivery_by_date": "2025-06-11T05:08:49.102Z",
+      "eta": "2025-06-10T02:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_050",
+      "client_name": "Samsung",
+      "container_label": "EWR-581-250520-50",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-05T05:08:49.102Z",
+      "delivery_by_date": "2025-06-07T05:08:49.102Z",
+      "eta": "2025-06-05T17:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_051",
+      "client_name": "DHL",
+      "container_label": "LAX-581-250521-51",
+      "status": "OPEN",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-08T00:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_052",
+      "client_name": "CargoTrans",
+      "container_label": "JFK-581-250522-52",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-08T09:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_053",
+      "client_name": "ShipCo",
+      "container_label": "SFO-581-250523-53",
+      "status": "DELIVERED",
+      "arrival_date": "2025-05-31T05:08:49.102Z",
+      "delivery_by_date": "2025-06-02T05:08:49.102Z",
+      "eta": "2025-06-02T01:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_054",
+      "client_name": "Logix",
+      "container_label": "SEA-581-250524-54",
+      "status": "OPEN",
+      "arrival_date": "2025-06-01T05:08:49.102Z",
+      "delivery_by_date": "2025-06-03T05:08:49.102Z",
+      "eta": "2025-06-01T10:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_055",
+      "client_name": "Oceanic",
+      "container_label": "EWR-581-250525-55",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-03T18:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_056",
+      "client_name": "Sony",
+      "container_label": "LAX-581-250526-56",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-06T05:08:49.102Z",
+      "delivery_by_date": "2025-06-08T05:08:49.102Z",
+      "eta": "2025-06-07T19:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_057",
+      "client_name": "Samsung",
+      "container_label": "JFK-581-250527-57",
+      "status": "OPEN",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-08T06:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_058",
+      "client_name": "DHL",
+      "container_label": "SFO-581-250528-58",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-09T05:08:49.102Z",
+      "delivery_by_date": "2025-06-11T05:08:49.102Z",
+      "eta": "2025-06-10T01:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_059",
+      "client_name": "CargoTrans",
+      "container_label": "SEA-581-250529-59",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-06T05:08:49.102Z",
+      "delivery_by_date": "2025-06-08T05:08:49.102Z",
+      "eta": "2025-06-06T16:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_060",
+      "client_name": "ShipCo",
+      "container_label": "EWR-581-250520-60",
+      "status": "OPEN",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-07T23:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_061",
+      "client_name": "Logix",
+      "container_label": "LAX-581-250521-61",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-07T13:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_062",
+      "client_name": "Oceanic",
+      "container_label": "JFK-581-250522-62",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-08T22:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_063",
+      "client_name": "Sony",
+      "container_label": "SFO-581-250523-63",
+      "status": "OPEN",
+      "arrival_date": "2025-06-02T05:08:49.102Z",
+      "delivery_by_date": "2025-06-04T05:08:49.102Z",
+      "eta": "2025-06-02T05:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_064",
+      "client_name": "Samsung",
+      "container_label": "SEA-581-250524-64",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-08T19:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_065",
+      "client_name": "DHL",
+      "container_label": "EWR-581-250525-65",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-03T12:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_066",
+      "client_name": "CargoTrans",
+      "container_label": "LAX-581-250526-66",
+      "status": "OPEN",
+      "arrival_date": "2025-06-05T05:08:49.102Z",
+      "delivery_by_date": "2025-06-07T05:08:49.102Z",
+      "eta": "2025-06-07T02:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_067",
+      "client_name": "ShipCo",
+      "container_label": "JFK-581-250527-67",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-05T05:08:49.102Z",
+      "delivery_by_date": "2025-06-07T05:08:49.102Z",
+      "eta": "2025-06-05T20:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_068",
+      "client_name": "Logix",
+      "container_label": "SFO-581-250528-68",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-03T22:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_069",
+      "client_name": "Oceanic",
+      "container_label": "SEA-581-250529-69",
+      "status": "OPEN",
+      "arrival_date": "2025-05-31T05:08:49.102Z",
+      "delivery_by_date": "2025-06-02T05:08:49.102Z",
+      "eta": "2025-06-02T03:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_070",
+      "client_name": "Sony",
+      "container_label": "EWR-581-250520-70",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-05T05:08:49.102Z",
+      "delivery_by_date": "2025-06-07T05:08:49.102Z",
+      "eta": "2025-06-06T17:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_071",
+      "client_name": "Samsung",
+      "container_label": "LAX-581-250521-71",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-02T05:08:49.102Z",
+      "delivery_by_date": "2025-06-04T05:08:49.102Z",
+      "eta": "2025-06-03T02:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_072",
+      "client_name": "DHL",
+      "container_label": "JFK-581-250522-72",
+      "status": "OPEN",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-08T09:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_073",
+      "client_name": "CargoTrans",
+      "container_label": "SFO-581-250523-73",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-04T05:08:49.102Z",
+      "delivery_by_date": "2025-06-06T05:08:49.102Z",
+      "eta": "2025-06-05T20:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_074",
+      "client_name": "ShipCo",
+      "container_label": "SEA-581-250524-74",
+      "status": "DELIVERED",
+      "arrival_date": "2025-05-31T05:08:49.102Z",
+      "delivery_by_date": "2025-06-02T05:08:49.102Z",
+      "eta": "2025-06-01T15:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_075",
+      "client_name": "Logix",
+      "container_label": "EWR-581-250525-75",
+      "status": "OPEN",
+      "arrival_date": "2025-06-09T05:08:49.102Z",
+      "delivery_by_date": "2025-06-11T05:08:49.102Z",
+      "eta": "2025-06-10T04:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_076",
+      "client_name": "Oceanic",
+      "container_label": "LAX-581-250526-76",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-09T16:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_077",
+      "client_name": "Sony",
+      "container_label": "JFK-581-250527-77",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-05T05:08:49.102Z",
+      "delivery_by_date": "2025-06-07T05:08:49.102Z",
+      "eta": "2025-06-05T06:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_078",
+      "client_name": "Samsung",
+      "container_label": "SFO-581-250528-78",
+      "status": "OPEN",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-07T08:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_079",
+      "client_name": "DHL",
+      "container_label": "SEA-581-250529-79",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-01T05:08:49.102Z",
+      "delivery_by_date": "2025-06-03T05:08:49.102Z",
+      "eta": "2025-06-02T18:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_080",
+      "client_name": "CargoTrans",
+      "container_label": "EWR-581-250520-80",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-04T03:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_081",
+      "client_name": "ShipCo",
+      "container_label": "LAX-581-250521-81",
+      "status": "OPEN",
+      "arrival_date": "2025-05-31T05:08:49.102Z",
+      "delivery_by_date": "2025-06-02T05:08:49.102Z",
+      "eta": "2025-05-31T23:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_082",
+      "client_name": "Logix",
+      "container_label": "JFK-581-250522-82",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-04T05:08:49.102Z",
+      "delivery_by_date": "2025-06-06T05:08:49.102Z",
+      "eta": "2025-06-05T07:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_083",
+      "client_name": "Oceanic",
+      "container_label": "SFO-581-250523-83",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-06T05:08:49.102Z",
+      "delivery_by_date": "2025-06-08T05:08:49.102Z",
+      "eta": "2025-06-06T20:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_084",
+      "client_name": "Sony",
+      "container_label": "SEA-581-250524-84",
+      "status": "OPEN",
+      "arrival_date": "2025-06-06T05:08:49.102Z",
+      "delivery_by_date": "2025-06-08T05:08:49.102Z",
+      "eta": "2025-06-06T19:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_085",
+      "client_name": "Samsung",
+      "container_label": "EWR-581-250525-85",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-03T05:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_086",
+      "client_name": "DHL",
+      "container_label": "LAX-581-250526-86",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-06T05:08:49.102Z",
+      "delivery_by_date": "2025-06-08T05:08:49.102Z",
+      "eta": "2025-06-08T01:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_087",
+      "client_name": "CargoTrans",
+      "container_label": "JFK-581-250527-87",
+      "status": "OPEN",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-03T17:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_088",
+      "client_name": "ShipCo",
+      "container_label": "SFO-581-250528-88",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-01T05:08:49.102Z",
+      "delivery_by_date": "2025-06-03T05:08:49.102Z",
+      "eta": "2025-06-02T19:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_089",
+      "client_name": "Logix",
+      "container_label": "SEA-581-250529-89",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-09T04:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_090",
+      "client_name": "Oceanic",
+      "container_label": "EWR-581-250520-90",
+      "status": "OPEN",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-08T09:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_091",
+      "client_name": "Sony",
+      "container_label": "LAX-581-250521-91",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-04T05:08:49.102Z",
+      "delivery_by_date": "2025-06-06T05:08:49.102Z",
+      "eta": "2025-06-05T15:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_092",
+      "client_name": "Samsung",
+      "container_label": "JFK-581-250522-92",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-04T21:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_093",
+      "client_name": "DHL",
+      "container_label": "SFO-581-250523-93",
+      "status": "OPEN",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-07T16:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_094",
+      "client_name": "CargoTrans",
+      "container_label": "SEA-581-250524-94",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-04T20:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_095",
+      "client_name": "ShipCo",
+      "container_label": "EWR-581-250525-95",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-06T05:08:49.102Z",
+      "delivery_by_date": "2025-06-08T05:08:49.102Z",
+      "eta": "2025-06-07T05:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_096",
+      "client_name": "Logix",
+      "container_label": "LAX-581-250526-96",
+      "status": "OPEN",
+      "arrival_date": "2025-06-03T05:08:49.102Z",
+      "delivery_by_date": "2025-06-05T05:08:49.102Z",
+      "eta": "2025-06-04T11:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_097",
+      "client_name": "Oceanic",
+      "container_label": "JFK-581-250527-97",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-06T05:08:49.102Z",
+      "delivery_by_date": "2025-06-08T05:08:49.102Z",
+      "eta": "2025-06-06T12:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_098",
+      "client_name": "Sony",
+      "container_label": "SFO-581-250528-98",
+      "status": "DELIVERED",
+      "arrival_date": "2025-06-06T05:08:49.102Z",
+      "delivery_by_date": "2025-06-08T05:08:49.102Z",
+      "eta": "2025-06-06T23:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_099",
+      "client_name": "Samsung",
+      "container_label": "SEA-581-250529-99",
+      "status": "OPEN",
+      "arrival_date": "2025-06-08T05:08:49.102Z",
+      "delivery_by_date": "2025-06-10T05:08:49.102Z",
+      "eta": "2025-06-08T07:08:49.102Z",
+      "warehouse_id": "581"
+    },
+    {
+      "id": "shp_100",
+      "client_name": "DHL",
+      "container_label": "EWR-581-250520-100",
+      "status": "IN_TRANSIT",
+      "arrival_date": "2025-06-07T05:08:49.102Z",
+      "delivery_by_date": "2025-06-09T05:08:49.102Z",
+      "eta": "2025-06-08T00:08:49.102Z",
+      "warehouse_id": "581"
+    }
+  ]
+}
