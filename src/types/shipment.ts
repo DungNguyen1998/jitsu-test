@@ -12,10 +12,25 @@ export interface Shipment {
 export type ShipmentStatus = 'OPEN' | 'IN_TRANSIT' | 'DELIVERED';
 
 export interface ShipmentFilters {
+  /**
+   * input value for search
+   */
   search: string;
+  /**
+   * selected statuses to filter by
+   */
   status?: ShipmentStatus[];
+  /**
+   * page number for OPEN shipments pagination
+   */
   open_page?: number;
+  /**
+   * page number for IN_TRANSIT shipments pagination
+   */
   in_transit_page?: number;
+  /**
+   * page number for DELIVERED shipments pagination
+   */
   delivered_page?: number;
 }
 

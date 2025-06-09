@@ -1,9 +1,9 @@
 import { Typography, Row, Col } from 'antd';
-import ShipmentList from '../components/shipments/ShipmentList';
-import ShipmentDetails from '../components/shipments/ShipmentDetails';
+import ShipmentDetails from '../components/shipments/shipment-detail';
 import SearchFilter from '../components/shipments/SearchFilter';
 import { useShipments } from '../hooks/useShipments';
 import type { ShipmentStatus } from '../types/shipment';
+import ShipmentList from '../components/shipments/shipment-list';
 
 const { Title } = Typography;
 

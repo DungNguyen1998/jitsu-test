@@ -1,5 +1,6 @@
 import { ConfigProvider, theme } from 'antd'
 import HomePage from './pages/HomePage'
+import { PRIMARY_COLOR } from './constants'
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       theme={{
         algorithm: theme.defaultAlgorithm,
         token: {
-          colorPrimary: '#1677ff',
+          colorPrimary: PRIMARY_COLOR,
         },
       }}
     >

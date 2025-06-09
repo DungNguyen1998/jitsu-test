@@ -1,121 +1,95 @@
-import { Card, Badge, Empty, Spin, Alert, List, Typography } from 'antd';
+import { Card, List, Typography } from 'antd';
 import BaseListItem from './BaseListItem';
 import type { ReactNode } from 'react';
-
-
-interface BaseStatusData<TItem> {
-  items: TItem[];
+export interface BaseListProps<TItem> {
+  /**
+   * The title displayed at the top of the list
+   */
+  title: string;
+  /**
+   * The name of a single item (e.g., "shipment", "order", "task")
+   */
+  itemName: string;
+  /**
+   * Array of items to display in the list
+   */
+  dataSource: TItem[];
+  /**
+   * Pagination configuration
+   */
   pagination: {
     page: number;
     limit: number;
     total: number;
     totalPages: number;
   };
-  isLoading: boolean;
-  error: Error | null;
-}
-
-interface ItemFieldConfig<TItem, TStatus extends string> {
-  title: (item: TItem) => string;
-  subtitle?: (item: TItem) => string;
-  status: (item: TItem) => TStatus;
-  icon?: React.ComponentType<any>;
-}
-
-interface BaseListProps<TItem, TStatus extends string> {
-  status: TStatus;
-  statusData: BaseStatusData<TItem>;
+  /**
+   * Whether the list is in a loading state
+   */
+  loading: boolean;
+  /**
+   * Currently selected item, if any
+   */
   selectedItem: TItem | null;
+  /**
+   * Callback when an item is selected
+   */
   onItemSelect: (item: TItem) => void;
-  onPageChange: (status: TStatus, page: number) => void;
-  statusConfig: {
-    labels: Record<TStatus, string>;
-    colors: Record<TStatus, string>;
-  };
-  itemName: string; // e.g., "shipment", "order", "task"
-  itemConfig: ItemFieldConfig<TItem, TStatus>;
+  /**
+   * Callback when user changes the page on pagination
+   */
+  onPageChange: (page: number) => void;
+  /**
+   * Function to render the content of each item
+   */
   renderItemContent: (item: TItem, isSelected: boolean) => ReactNode;
 }
 
-const BaseList = <TItem extends { id: string }, TStatus extends string>({
-  status,
-  statusData,
+/**
+ * A generic list component that handles selection, pagination, and custom item content rendering.
+ */
+const BaseList = <TItem extends { id: string }>({
+  title,
+  itemName,
+  dataSource,
+  pagination,
+  loading,
   selectedItem,
   onItemSelect,
   onPageChange,
-  statusConfig,
-  itemName,
   renderItemContent,
-}: BaseListProps<TItem, TStatus>) => {
-  const { items, pagination, isLoading, error } = statusData;
-  const { labels, colors } = statusConfig;
-
-
-  if (error) {
-    return (
-      <Card
-        title={
-          <div className="flex items-center justify-between">
-            <Badge 
-              status={colors[status] as any} 
-              text={labels[status]} 
-              className="text-lg font-medium"
-            />
-            <span className="text-sm text-red-500">Error</span>
-          </div>
-        }
-        className="border shadow-sm"
-      >
-        <Alert 
-          message={`Error loading ${labels[status].toLowerCase()} ${itemName}s`} 
-          description={error.message}
-          type="error" 
-        />
-      </Card>
-    );
-  }
+}: BaseListProps<TItem>) => {
 
   return (
     <Card
-      title={
-        <div className="flex items-center justify-between">
-          <Badge 
-            status={colors[status] as any} 
-            text={labels[status]} 
-            className="text-lg font-medium"
-          />
-          <span className="text-sm text-gray-500">
-            {pagination.total} {itemName}{pagination.total !== 1 ? 's' : ''}
-          </span>
-        </div>
-      }
       className="border shadow-sm"
       size="small"
-    >
-      {isLoading ? (
-        <div className="flex justify-center py-8">
-          <Spin size="large" />
+      title={
+        <div className="flex items-center justify-between">
+            <Typography.Text strong>{title}</Typography.Text>
         </div>
-      ) : pagination.total === 0 ? (
-        <Empty 
-          description={`No ${labels[status].toLowerCase()} ${itemName}s`}
-          className="py-8"
-        />
-      ) : (
+      }
+      extra={
+        <Typography.Text>
+          {pagination?.total} {itemName}{pagination?.total !== 1 ? 's' : ''}
+        </Typography.Text>
+      }
+    >
         <List
-          dataSource={items}
+          loading={loading}
+          dataSource={dataSource}
           split={false}
           pagination={{
             size: 'small',
-            current: pagination.page,
-            total: pagination.total,
-            pageSize: pagination.limit,
-            showSizeChanger: false,
-            showTotal: (total, range) => 
-              `${range[0]}-${range[1]} of ${total} ${itemName}s`,
-            onChange: (page) => onPageChange(status, page),
             position: 'bottom',
             align: 'center',
+            showSizeChanger: false,
+            current: pagination?.page,
+            total: pagination?.total,
+            pageSize: pagination?.limit,
+            showTotal: (total, range) => 
+              `${range?.[0]}-${range?.[1]} of ${total} ${itemName}s`,
+            onChange: onPageChange,
           }}
           renderItem={(item) => (
             <List.Item style={{ padding: 0 }}>             
@@ -128,7 +102,6 @@ const BaseList = <TItem extends { id: string }, TStatus extends string>({
             </List.Item>
           )}
         />
-      )}
     </Card> 
   );
 };
