@@ -63,7 +63,7 @@ const HomePage = () => {
         {/* Right Panel - Sticky Shipment Details */}
         <Col xs={24} lg={12}>
           <div 
-            className="bg-white rounded-lg shadow-sm border"
+            className="bg-white rounded-lg shadow-sm border relative"
             style={{ 
               height: '80vh',
               position: 'sticky',

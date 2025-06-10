@@ -10,8 +10,8 @@ interface ShipmentDetailsProps {
 const ShipmentDetails = ({ shipmentId }: ShipmentDetailsProps) => {
   const { 
     shipment, 
-    isLoading,
-    error 
+    error,
+    isFetching,
   } = useShipmentDetails(shipmentId);
 
   if (!shipmentId) {
@@ -22,7 +22,7 @@ const ShipmentDetails = ({ shipmentId }: ShipmentDetailsProps) => {
     );
   }
 
-  if (error) {
+  if (error && !shipment?.id) {
     return (
       <div className="p-4">
         <Alert
@@ -35,12 +35,10 @@ const ShipmentDetails = ({ shipmentId }: ShipmentDetailsProps) => {
     );
   }
 
-
   return (
-    <Spin spinning={isLoading}>
-    <div className="overflow-y-auto p-4 max-h-[600px]">
+    <Spin spinning={isFetching} size="small">
+    <div className={`overflow-y-auto p-4 max-h-[600px]`}>
       <ContentCard shipment={shipment} />
-
       <StatusUpdateCard 
         shipment={shipment} 
       />

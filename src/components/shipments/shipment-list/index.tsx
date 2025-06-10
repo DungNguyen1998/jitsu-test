@@ -30,18 +30,22 @@ const ShipmentList = ({
   return (
     <div className="flex flex-col h-full">
         <div className="space-y-4 p-4">
-            {statusesToShow.map(status => (
-            <ShipmentStatusListCard
-                key={status}
-                status={status}
-                dataSource={groupedData[status].shipments}
-                pagination={groupedData[status].pagination}
-                loading={groupedData[status].isLoading}
-                selectedId={selectedShipmentId}
-                onItemSelect={onShipmentSelect}
-                onPageChange={(page) => onPageChange(status, page)}
-            />
-            ))}
+            {statusesToShow.map(status => {
+              const statusData = groupedData[status];
+              
+              return (
+                <ShipmentStatusListCard
+                  key={status}
+                  status={status}
+                  dataSource={statusData.shipments}
+                  pagination={statusData.pagination}
+                  loading={statusData.isLoading}
+                  selectedId={selectedShipmentId}
+                  onItemSelect={onShipmentSelect}
+                  onPageChange={(page) => onPageChange(status, page)}
+                />
+              );
+            })}
         </div>
     </div>
   );

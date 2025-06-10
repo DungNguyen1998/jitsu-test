@@ -1,6 +1,8 @@
-import { Card, List, Typography } from 'antd';
+import { Card, List, Spin, Typography } from 'antd';
 import BaseListItem from './BaseListItem';
 import type { ReactNode } from 'react';
+import React, { useCallback } from 'react';
+
 export interface BaseListProps<TItem> {
   /**
    * The title displayed at the top of the list
@@ -47,6 +49,7 @@ export interface BaseListProps<TItem> {
 
 /**
  * A generic list component that handles selection, pagination, and custom item content rendering.
+ * Optimized for performance with memoized callbacks and stable props.
  */
 const BaseList = <TItem extends { id: string }>({
   title,
@@ -59,14 +62,29 @@ const BaseList = <TItem extends { id: string }>({
   onPageChange,
   renderItemContent,
 }: BaseListProps<TItem>) => {
+  // Create a memoized render function for the list
+  const renderListItem = useCallback((item: TItem) => {
+    const isSelected = selectedId === item.id;
+
+    return (
+      <BaseListItem
+        key={item.id}
+        item={item}
+        isSelected={isSelected}
+        onItemSelect={onItemSelect}
+        renderItemContent={renderItemContent}
+      />
+    );
+  }, [selectedId, onItemSelect, renderItemContent]);
 
   return (
     <Card
-      className="border shadow-sm"
+      className={`border shadow-sm`}
       size="small"
       title={
-        <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
             <Typography.Text strong>{title}</Typography.Text>
+            <Spin spinning={loading} size="small" />
         </div>
       }
       extra={
@@ -76,9 +94,9 @@ const BaseList = <TItem extends { id: string }>({
       }
     >
         <List
-          loading={loading}
           dataSource={dataSource}
           split={false}
+          loading={false} // Disable built-in loading to prevent layout shift
           pagination={{
             size: 'small',
             position: 'bottom',
@@ -90,17 +108,9 @@ const BaseList = <TItem extends { id: string }>({
             showTotal: (total, range) => 
               `${range?.[0]}-${range?.[1]} of ${total} ${itemName}s`,
             onChange: onPageChange,
+            disabled: loading, // Disable pagination during loading
           }}
-          renderItem={(item) => (
-            <List.Item style={{ padding: 0 }}>             
-                <BaseListItem
-                  key={item.id}
-                  isSelected={selectedId === item.id}
-                  onClick={() => onItemSelect(item.id)}
-                  renderContent={() => renderItemContent(item, selectedId === item.id)}
-                />
-            </List.Item>
-          )}
+          renderItem={renderListItem}
         />
     </Card> 
   );

@@ -27,17 +27,25 @@ export const useShipmentDetails = (shipmentId: string) => {
     data: shipment,
     isLoading,
     error,
-    refetch
+    refetch,
+    isFetching
   } = useQuery({
     queryKey: ['shipment', shipmentId],
     queryFn: () => shipmentService.getShipmentById(shipmentId!),
     enabled: !!shipmentId,
-    initialData: defaultShipment,
+    placeholderData: (previousData, previousQuery) => {
+      // Keep previous data when switching between different shipments
+      if (previousQuery && previousData && previousData.id !== defaultShipment.id) {
+        return previousData;
+      }
+      return defaultShipment;
+    },
   });
 
   return {
-    shipment,
+    shipment: shipment ?? defaultShipment,
     isLoading,
+    isFetching, // This shows true when fetching new data but still has cached data
     error,
     refetch,
   };

@@ -15,11 +15,10 @@ interface UseSearchFilterReturn {
 }
 
 /**
- * Custom hook for managing search and filter functionality with debounced search input
+ * Custom hook for managing search and filter values for UI components with debounced search input
  * 
  * @param filters - Current filter state
  * @param onFiltersChange - Callback to update filters
- * @param debounceMs - Debounce delay in milliseconds (default: 300)
  * @returns Object containing search value and handler functions
  */
 export const useSearchFilter = (props: UseSearchFilterProps): UseSearchFilterReturn => {

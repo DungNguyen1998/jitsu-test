@@ -1,4 +1,5 @@
-import { Card } from 'antd';
+import React, { useMemo, useCallback } from 'react';
+import { Card, List } from 'antd';
 import type { ReactNode } from 'react';
 import { PRIMARY_COLOR } from '../../constants';
 
@@ -7,38 +8,61 @@ const SELECTED_CARD_STYLE: React.CSSProperties = {
     backgroundColor: '#f0f8ff',
     boxShadow: '0 4px 12px rgba(24, 144, 255, 0.15)',
 };
-interface BaseListItemProps {
+
+interface BaseListItemProps<TItem = any> {
+  /**
+   * The item data to display
+   */
+  item: TItem & { id: string };
   /**
    * Whether the item is currently selected
    */
   isSelected: boolean;
   /**
-   * Click handler for the item
+   * Callback when an item is selected
    */
-  onClick: () => void;
+  onItemSelect: (itemId: string) => void;
   /**
-   * Function to render the content inside the item
+   * Function to render the content of each item
    */
-  renderContent: () => ReactNode;
+  renderItemContent: (item: TItem, isSelected: boolean) => ReactNode;
 }
 
 /**
- * Renders a selectable card item that can be used in lists (e.g., BaseList)
+ * Optimized selectable list item component with memoization
+ * Handles both the List.Item wrapper and Card rendering with stable callbacks
  */
-const BaseListItem = (props: BaseListItemProps) => {
-  const {isSelected, onClick, renderContent} = props;
+const BaseListItem = React.memo<BaseListItemProps>((props) => {
+  const { item, isSelected, onItemSelect, renderItemContent } = props;
+
+  // Create stable callbacks for this specific item
+  const handleClick = useCallback(() => {
+    onItemSelect(item.id);
+  }, [onItemSelect, item.id]);
+
+  // Memoize the card style to prevent object recreation on every render
+  const cardStyle = useMemo(() => {
+    return isSelected ? { ...SELECTED_CARD_STYLE } : undefined;
+  }, [isSelected]);
+
+  // Memoize the rendered content to avoid re-rendering if renderItemContent function is stable
+  const content = useMemo(() => {
+    return renderItemContent(item, isSelected);
+  }, [renderItemContent, item, isSelected]);
 
   return (
-    <Card
-      hoverable
-      className='w-full mb-2'
-      style={isSelected ? {...SELECTED_CARD_STYLE} : {}}
-      onClick={onClick}
-      size="small"
-    >
-      {renderContent()}
-    </Card>
+    <List.Item style={{ padding: 0 }}>
+      <Card
+        hoverable
+        className='w-full mb-2'
+        style={cardStyle}
+        onClick={handleClick}
+        size="small"
+      >
+        {content}
+      </Card>
+    </List.Item>
   );
-};
+});
 
 export default BaseListItem;
