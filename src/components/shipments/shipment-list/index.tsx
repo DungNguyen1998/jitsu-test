@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
 import ShipmentStatusListCard from './ShipmentListByStatus';
-import type { Shipment, ShipmentStatus, GroupedShipmentData } from '../../../types/shipment';
+import type { ShipmentStatus, GroupedShipmentData } from '../../../types/shipment';
 
 interface ShipmentListProps {
   groupedData: GroupedShipmentData;
-  selectedShipment: Shipment | null;
-  onShipmentSelect: (shipment: Shipment) => void;
+  selectedShipmentId: string;
+  onShipmentSelect: (shipmentId: string) => void;
   onPageChange: (status: ShipmentStatus, page: number) => void;
   filteringStatuses?: ShipmentStatus[];
 }
@@ -14,7 +14,7 @@ const statusOrder: ShipmentStatus[] = ['OPEN', 'IN_TRANSIT', 'DELIVERED'];
 
 const ShipmentList = ({
   groupedData,
-  selectedShipment,
+  selectedShipmentId,
   onShipmentSelect,
   onPageChange,
   filteringStatuses,
@@ -37,7 +37,7 @@ const ShipmentList = ({
                 dataSource={groupedData[status].shipments}
                 pagination={groupedData[status].pagination}
                 loading={groupedData[status].isLoading}
-                selectedItem={selectedShipment}
+                selectedId={selectedShipmentId}
                 onItemSelect={onShipmentSelect}
                 onPageChange={(page) => onPageChange(status, page)}
             />

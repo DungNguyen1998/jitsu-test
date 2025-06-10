@@ -28,13 +28,13 @@ export interface BaseListProps<TItem> {
    */
   loading: boolean;
   /**
-   * Currently selected item, if any
+   * Currently selected item id, if any
    */
-  selectedItem: TItem | null;
+  selectedId: string;
   /**
    * Callback when an item is selected
    */
-  onItemSelect: (item: TItem) => void;
+  onItemSelect: (itemId: string) => void;
   /**
    * Callback when user changes the page on pagination
    */
@@ -54,7 +54,7 @@ const BaseList = <TItem extends { id: string }>({
   dataSource,
   pagination,
   loading,
-  selectedItem,
+  selectedId,
   onItemSelect,
   onPageChange,
   renderItemContent,
@@ -95,9 +95,9 @@ const BaseList = <TItem extends { id: string }>({
             <List.Item style={{ padding: 0 }}>             
                 <BaseListItem
                   key={item.id}
-                  isSelected={selectedItem?.id === item.id}
-                  onClick={() => onItemSelect(item)}
-                  renderContent={() => renderItemContent(item, selectedItem?.id === item.id)}
+                  isSelected={selectedId === item.id}
+                  onClick={() => onItemSelect(item.id)}
+                  renderContent={() => renderItemContent(item, selectedId === item.id)}
                 />
             </List.Item>
           )}

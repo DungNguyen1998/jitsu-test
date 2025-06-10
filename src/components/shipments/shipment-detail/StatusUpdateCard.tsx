@@ -1,14 +1,15 @@
-import { Button, Card, message, Select } from "antd";
+import { Button, Card, Select, App } from "antd";
 import StatusBadge from "../../base/StatusBadge";
 import type { Shipment, ShipmentStatus } from "../../../types/shipment";
 import { STATUS_OPTIONS } from "../../../constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useShipmentMutation } from "../../../hooks/useShipmentMutation";
 
-const StatusUpdateCard = ({ shipment, onStatusUpdate, isUpdating }: { shipment: Shipment, onStatusUpdate: (payload: { id: string; status: ShipmentStatus }) => void, isUpdating: boolean }) => {
-    const { selectedStatus, setSelectedStatus, handleStatusUpdate } = useStatusUpdate(shipment, onStatusUpdate);
+const StatusUpdateCard = ({ shipment }: { shipment: Shipment }) => {
+    const { selectedStatus, setSelectedStatus, handleStatusUpdate, isUpdating } = useStatusUpdate(shipment);
     return (
         <Card title="Update Status" className="mb-6" size="small">
-          <div className="space-y-4">
+          <div className="flex gap-4 items-center">
               <Select
                 placeholder="Choose a new status"
                 value={selectedStatus}
@@ -40,20 +41,31 @@ const StatusUpdateCard = ({ shipment, onStatusUpdate, isUpdating }: { shipment: 
     );
   };
   
-  const useStatusUpdate = (shipment: Shipment, onStatusUpdate: (payload: { id: string; status: ShipmentStatus }) => void) => {
+  const useStatusUpdate = (shipment: Shipment) => {
     const [selectedStatus, setSelectedStatus] = useState<ShipmentStatus | undefined>();
+    const { message } = App.useApp();
+    const { mutate: updateShipment, isPending: isUpdating, isSuccess, isError } = useShipmentMutation();
+    
     const handleStatusUpdate = () => {
-      if (!selectedStatus || selectedStatus === shipment.status) {
-        message.warning('Please select a different status');
+      if (!selectedStatus) {
         return;
       }
-  
-      onStatusUpdate({ id: shipment.id, status: selectedStatus });
-      setSelectedStatus(undefined);
-      message.success('Status update initiated');
+      updateShipment({ ...shipment, status: selectedStatus });
     }
+
+    // Handle success and error messages
+    useEffect(() => {
+      if (isSuccess) {
+        message.success('Status updated successfully');
+        setSelectedStatus(undefined); // Reset selection on success
+      }
+      if (isError) {
+        message.error('Failed to update status');
+      }
+    }, [isSuccess, isError]);
+
   
-    return { selectedStatus, setSelectedStatus, handleStatusUpdate };
+    return { selectedStatus, setSelectedStatus, handleStatusUpdate, isUpdating };
   }
 
   export default StatusUpdateCard

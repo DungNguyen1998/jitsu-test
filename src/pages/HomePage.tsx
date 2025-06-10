@@ -9,17 +9,14 @@ const { Title } = Typography;
 
 const HomePage = () => {
   const {
-    shipments,
+    // shipments,
     groupedData,
     isLoading,
-    error,
-    selectedShipment,
-    setSelectedShipment,
+    selectedShipmentId,
+    setSelectedShipmentId,
     filters,
     setFilters,
     updateStatusPage,
-    updateShipmentStatus,
-    isUpdatingStatus,
   } = useShipments();
 
   // Determine which status groups to show based on filters
@@ -55,8 +52,8 @@ const HomePage = () => {
           >
             <ShipmentList
               groupedData={groupedData}
-              selectedShipment={selectedShipment}
-              onShipmentSelect={setSelectedShipment}
+              selectedShipmentId={selectedShipmentId}
+              onShipmentSelect={setSelectedShipmentId}
               onPageChange={updateStatusPage}
               filteringStatuses={filteringStatuses}
             />
@@ -75,9 +72,7 @@ const HomePage = () => {
             }}
           >
             <ShipmentDetails
-              shipment={selectedShipment}
-              onStatusUpdate={updateShipmentStatus}
-              isUpdating={isUpdatingStatus}
+              shipmentId={selectedShipmentId || ''}
             />
           </div>
         </Col>

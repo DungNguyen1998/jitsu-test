@@ -1,4 +1,4 @@
-import { ConfigProvider, theme } from 'antd'
+import { ConfigProvider, theme, App as AntdApp } from 'antd'
 import HomePage from './pages/HomePage'
 import { PRIMARY_COLOR } from './constants'
 
@@ -12,9 +12,11 @@ function App() {
         },
       }}
     >
-      <div className="min-h-screen bg-gray-50 p-6">
-        <HomePage />
-      </div>
+      <AntdApp>
+        <div className="min-h-screen bg-gray-50 p-6">
+          <HomePage />
+        </div>
+      </AntdApp>
     </ConfigProvider>
   )
 }

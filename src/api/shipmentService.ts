@@ -69,9 +69,14 @@ export const shipmentService = {
 
   // Update shipment status
   async updateShipmentStatus(payload: UpdateShipmentStatusPayload): Promise<Shipment> {
-    const response = await apiClient.patch<Shipment>(`/shipments/${payload.id}/status`, {
+    const response = await apiClient.patch<Shipment>(`/shipments/${payload.id}`, {
       status: payload.status
     });
+    return response.data;
+  },
+  // Update shipment by id
+  async updateShipmentById(payload: Shipment): Promise<Shipment> {
+    const response = await apiClient.patch<Shipment>(`/shipments/${payload.id}`, payload);
     return response.data;
   },
 
