@@ -1,7 +1,8 @@
-import { Empty, Spin, Alert } from 'antd';
-import ContentCard from './ContentCard';
-import StatusUpdateCard from './StatusUpdateCard';
+import { Empty, Spin, Alert, Col, Row } from 'antd';
+import Information from './Information';
+import StatusTimeline from './StatusTimeline';
 import { useShipmentDetails } from '../../../hooks/useShipmentDetails';
+import SimpleStatusChanger from './StatusChanger';
 
 interface ShipmentDetailsProps {
   shipmentId: string;
@@ -37,12 +38,20 @@ const ShipmentDetails = ({ shipmentId }: ShipmentDetailsProps) => {
 
   return (
     <Spin spinning={isFetching} size="small">
-    <div className={`overflow-y-auto p-4 max-h-[600px]`}>
-      <ContentCard shipment={shipment} />
-      <StatusUpdateCard 
-        shipment={shipment} 
-      />
-    </div>
+      <div className={`overflow-y-auto p-4 max-h-[600px]`}>
+        {/* Status Timeline - Full Width */}
+        <StatusTimeline shipment={shipment} />
+        
+        {/* Information and Status Changer */}
+        <Row gutter={16}>
+          <Col span={14}>
+            <Information shipment={shipment} />
+          </Col>
+          <Col span={10}>
+            <SimpleStatusChanger shipment={shipment} />
+          </Col>
+        </Row>
+     </div>
     </Spin>
   );
 };

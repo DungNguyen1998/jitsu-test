@@ -19,9 +19,10 @@ const SearchFilter = ({ filters, onFiltersChange, loading = false }: SearchFilte
   });
 
   return (
-    <div className="p-4 bg-white border-b">
-      <Row gutter={16} justify="center">
-        <Col span={12}>
+    <div className="p-4 mb-2">
+      <Row gutter={4} align="bottom" wrap={false}>
+        <Col flex={1}>
+        <div className='flex flex-col gap-2'>
           <Input
             placeholder="Search by container label or client name..."
             prefix={<SearchOutlined />}
@@ -30,8 +31,6 @@ const SearchFilter = ({ filters, onFiltersChange, loading = false }: SearchFilte
             disabled={loading}
             allowClear
           />
-        </Col>
-        <Col span={10}>
           <Select
             placeholder="Filter by status"
             value={filters.status || []}
@@ -41,14 +40,16 @@ const SearchFilter = ({ filters, onFiltersChange, loading = false }: SearchFilte
             className="w-full"
             mode="multiple"
           >
-            {STATUS_OPTIONS.map(option => (
+            {STATUS_OPTIONS.map((option: { label: string; value: string }) => (
               <Option key={option.value} value={option.value}>
                 {option.label}
               </Option>
             ))}
           </Select>
+        </div>
+          
         </Col>
-        <Col span={2}>
+        <Col>
           <Button type="primary" onClick={handleClear}>
             Clear
           </Button>

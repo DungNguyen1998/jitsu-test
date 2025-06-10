@@ -31,6 +31,7 @@ for (let i = 1; i <= 100; i++) {
     status: statusList[i % statusList.length],
     arrival_date: arrival.toISOString(),
     delivery_by_date: new Date(arrival.getTime() + 2 * 86400000).toISOString(),
+    delivered_date: statusList[i % statusList.length] === "DELIVERED" ? new Date(arrival.getTime() + 2 * 86400000).toISOString() : null,
     eta: eta.toISOString(),
     warehouse_id: "581",
   });

@@ -4,6 +4,7 @@ import type { Shipment, ShipmentStatus } from '../../../types/shipment';
 import { PRIMARY_COLOR, STATUS_LABELS } from '../../../constants';
 import StatusBadge from '../../base/StatusBadge';
 import React, { useCallback } from 'react';
+import { formatDate } from '../../../utils/format-date';
 
 const { Text } = Typography;
 
@@ -37,7 +38,7 @@ const ShipmentListByStatus = React.memo<ShipmentStatusListProps>((props) => {
             {shipment.container_label}
           </Text>
           <Text style={{ color: textColor, fontSize: '11px'}} type='secondary'>
-            {new Date(shipment.arrival_date).toLocaleString()}
+            {formatDate(shipment.arrival_date)}
           </Text>
         </div>
       </div>

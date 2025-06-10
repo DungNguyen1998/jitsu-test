@@ -30,6 +30,7 @@ export const shipmentService = {
       searchParams.set('q', params.search);
     }
     if (params.status) searchParams.set('status', params.status);
+    searchParams.set('_sort', 'arrival_date');
     
     const queryString = searchParams.toString();
     const endpoint = `/shipments${queryString ? `?${queryString}` : ''}`;

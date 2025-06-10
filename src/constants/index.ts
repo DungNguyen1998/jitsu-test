@@ -7,8 +7,8 @@ export const STATUS_LABELS: Record<ShipmentStatus, string> = {
 };
   
 export const STATUS_COLORS: Record<ShipmentStatus, string> = {
-    OPEN: 'orange',
-    IN_TRANSIT: 'processing',
+    OPEN: 'processing',
+    IN_TRANSIT: 'orange',
     DELIVERED: 'success',
 };
 

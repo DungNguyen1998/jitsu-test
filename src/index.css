@@ -75,3 +75,27 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Status Timeline Styles */
+.status-timeline-steps .ant-steps-item-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.status-timeline-steps .ant-steps-item-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.status-timeline-steps .ant-steps-item-process .ant-steps-item-title {
+  color: #1890ff;
+}
+
+.status-timeline-steps .ant-steps-item-finish .ant-steps-item-title {
+  color: #52c41a;
+}
+
+.status-timeline-steps .ant-steps-item-icon {
+  font-size: 20px;
+}
