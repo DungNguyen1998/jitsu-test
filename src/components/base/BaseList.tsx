@@ -1,7 +1,7 @@
 import { Card, List, Spin, Typography } from 'antd';
 import BaseListItem from './BaseListItem';
 import type { ReactNode } from 'react';
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 
 export interface BaseListProps<TItem> {
   /**
