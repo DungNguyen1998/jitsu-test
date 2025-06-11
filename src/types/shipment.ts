@@ -5,6 +5,7 @@ export interface Shipment {
   status: ShipmentStatus;
   arrival_date: string;
   delivery_by_date: string;
+  delivered_date: string;
   eta: string;
   warehouse_id: string;
 }
