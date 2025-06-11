@@ -99,3 +99,21 @@ button:focus-visible {
 .status-timeline-steps .ant-steps-item-icon {
   font-size: 20px;
 }
+
+.status-timeline-steps .ant-steps-item-custom:first-child.ant-steps-item-process .ant-steps-icon {
+  color: #1890ff;
+}
+
+/* for second child */
+.status-timeline-steps .ant-steps-item-custom:nth-child(2).ant-steps-item-process .ant-steps-icon {
+  color: orange;
+}
+
+/* for second child */
+.status-timeline-steps .ant-steps-item-custom:nth-child(2).ant-steps-item-finish .ant-steps-icon{
+  color: orange;
+}
+
+.status-timeline-steps .ant-steps-item-custom:last-child.ant-steps-item-process .ant-steps-icon {
+  color: #52c41a;
+}

@@ -44,10 +44,10 @@ const ShipmentDetails = ({ shipmentId }: ShipmentDetailsProps) => {
         
         {/* Information and Status Changer */}
         <Row gutter={16}>
-          <Col span={14}>
+          <Col sm={24} md={14}>
             <Information shipment={shipment} />
           </Col>
-          <Col span={10}>
+          <Col sm={24} md={10}>
             <SimpleStatusChanger shipment={shipment} />
           </Col>
         </Row>
