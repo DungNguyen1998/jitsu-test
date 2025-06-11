@@ -11,6 +11,7 @@ export const defaultShipment: Shipment = {
     delivery_by_date: '',
     eta: '',
     warehouse_id: '',
+    delivered_date: '',
 };
 
 /**
@@ -19,6 +20,7 @@ export const defaultShipment: Shipment = {
  * @returns {Object} An object containing:
  * - shipment: The fetched shipment data or initial empty shipment if not loaded
  * - isLoading: Boolean indicating if the query is in progress
+ * - isFetching: Boolean indicating if the query is fetching data
  * - error: Any error that occurred during the fetch
  * - refetch: Function to manually trigger a refetch of the data
  */

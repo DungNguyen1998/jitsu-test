@@ -14,7 +14,7 @@ const HomePage = () => {
     setSelectedShipmentId,
     filters,
     setFilters,
-    updateStatusPage,
+    onPaginationChange,
   } = useShipments();
 
   return (
@@ -44,7 +44,7 @@ const HomePage = () => {
               groupedData={groupedData}
               selectedShipmentId={selectedShipmentId}
               onShipmentSelect={setSelectedShipmentId}
-              onPageChange={updateStatusPage}
+              onPageChange={onPaginationChange}
               filteringStatuses={filters.status || []}
             />
           </div>

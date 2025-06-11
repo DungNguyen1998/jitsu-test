@@ -13,7 +13,7 @@ interface SearchFilterProps {
 }
 
 const SearchFilter = ({ filters, onFiltersChange, loading = false }: SearchFilterProps) => {
-  const { searchValue, handleSearchChange, handleStatusChange, handleClear } = useSearchFilter({
+  const { filters: handledFilters, handleSearchChange, handleStatusChange, handleClear } = useSearchFilter({
     filters,
     onFiltersChange,
   });
@@ -26,14 +26,14 @@ const SearchFilter = ({ filters, onFiltersChange, loading = false }: SearchFilte
           <Input
             placeholder="Search by container label or client name..."
             prefix={<SearchOutlined />}
-            value={searchValue}
+            value={handledFilters.search}
             onChange={(e) => handleSearchChange(e.target.value)}
             disabled={loading}
             allowClear
           />
           <Select
             placeholder="Filter by status"
-            value={filters.status || []}
+            value={handledFilters.status || []}
             onChange={handleStatusChange}
             disabled={loading}
             allowClear

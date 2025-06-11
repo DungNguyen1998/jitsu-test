@@ -8,7 +8,7 @@ interface UseSearchFilterProps {
 }
 
 interface UseSearchFilterReturn {
-  searchValue: string;
+  filters: ShipmentFilters;
   handleSearchChange: (value: string) => void;
   handleStatusChange: (status: ShipmentStatus[] | undefined) => void;
   handleClear: () => void;
@@ -68,7 +68,7 @@ export const useSearchFilter = (props: UseSearchFilterProps): UseSearchFilterRet
   }, [onFiltersChange]);
 
   return {
-    searchValue,
+    filters: {...filters, search: searchValue},
     handleSearchChange,
     handleStatusChange,
     handleClear,
