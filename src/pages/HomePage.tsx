@@ -14,7 +14,6 @@ const HomePage = () => {
     setSelectedShipmentId,
     filters,
     setFilters,
-    onPaginationChange,
   } = useShipments();
 
   return (
@@ -44,8 +43,8 @@ const HomePage = () => {
               groupedData={groupedData}
               selectedShipmentId={selectedShipmentId}
               onShipmentSelect={setSelectedShipmentId}
-              onPageChange={onPaginationChange}
-              filteringStatuses={filters.status || []}
+              filters={filters}
+              onFiltersChange={setFilters}
             />
           </div>
         </Col>

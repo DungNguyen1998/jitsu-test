@@ -1,13 +1,14 @@
 import { useMemo } from 'react';
 import ShipmentStatusListCard from './ShipmentListByStatus';
-import type { ShipmentStatus, GroupedShipmentData } from '../../../types/shipment';
+import type { ShipmentStatus, GroupedShipmentData, ShipmentFilters } from '../../../types/shipment';
+import { updateFilterPagination } from '../../../hooks/useShipmentFilters';
 
 interface ShipmentListProps {
   groupedData: GroupedShipmentData;
   selectedShipmentId: string;
   onShipmentSelect: (shipmentId: string) => void;
-  onPageChange: (status: ShipmentStatus, page: number) => void;
-  filteringStatuses?: ShipmentStatus[];
+  filters: ShipmentFilters;
+  onFiltersChange: (filters: ShipmentFilters) => void;
 }
 
 const statusOrder: ShipmentStatus[] = ['OPEN', 'IN_TRANSIT', 'DELIVERED'];
@@ -16,16 +17,17 @@ const ShipmentList = ({
   groupedData,
   selectedShipmentId,
   onShipmentSelect,
-  onPageChange,
-  filteringStatuses,
+  filters,
+  onFiltersChange,
 }: ShipmentListProps) => {
+  
   // Determine which statuses to show
   const statusesToShow = useMemo(() => {
-    if (!filteringStatuses || filteringStatuses.length === 0) {
+    if (!filters.status || filters.status.length === 0) {
       return statusOrder; // Show all if no filter
     }
-    return statusOrder.filter(status => filteringStatuses.includes(status));
-  }, [filteringStatuses]);
+    return statusOrder.filter(status => filters?.status?.includes(status));
+  }, [filters.status]);
 
   return (
     <div className="flex flex-col h-full">
@@ -42,7 +44,10 @@ const ShipmentList = ({
                   loading={statusData.isLoading}
                   selectedId={selectedShipmentId}
                   onItemSelect={onShipmentSelect}
-                  onPageChange={(page) => onPageChange(status, page)}
+                  onPageChange={(page) => {
+                    const newFilters = updateFilterPagination(filters, status, page);
+                    onFiltersChange(newFilters);
+                  }}
                 />
               );
             })}

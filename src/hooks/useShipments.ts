@@ -13,16 +13,15 @@ import { useState } from 'react';
 export const useShipments = () => {
 
   // Manage filter state and URL synchronization
-  const { filters, setFilters, updateStatusPage } = useShipmentFilters();
+  const { filters, setFilters } = useShipmentFilters();
 
   // Fetch shipment data based on current filters
-  const { groupedData, allShipments, isLoading, error } = useShipmentQueries(filters);
+  const { groupedData, isLoading, error } = useShipmentQueries(filters);
 
   const [selectedShipmentId, setSelectedShipmentId] = useState<string>('');
 
   return {
     // Data
-    shipments: allShipments,
     groupedData,
     isLoading,
     error,
@@ -32,8 +31,7 @@ export const useShipments = () => {
     setSelectedShipmentId,
 
     // Filter state
-    filters,
-    setFilters,
-    updateStatusPage,
+    filters, // filters state includes search input, status filter, and pagination
+    setFilters, // update filters state and sync with URL
   };
 }; 

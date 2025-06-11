@@ -84,6 +84,10 @@ const ShipmentListByStatus = React.memo<ShipmentStatusListProps>((props) => {
     return false; // Data changed, re-render
   }
 
+  if (prevProps.onPageChange !== nextProps.onPageChange) {
+    return false; // on page change (filters change)
+  }
+
   // No relevant changes detected, skip re-render
   return true;
 });
